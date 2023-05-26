@@ -72,42 +72,60 @@ class Slizerin extends Hogwarts {
 
     }
 
-    public static void print(Slizerin[] slizerins) {
-        System.out.println("Учеников на факультете Слизерин - " + slizerins.length + " человека.");
-        for (int i = 0; i < slizerins.length; i++) {
-            Slizerin slizerin = slizerins[i];
-            System.out.println("Имя - " + slizerin.getName() + ". Фамилия - " + slizerin.getSurName() + ". Сила магии и расстояние трансгресии - "
-                    + slizerin.getMagic() + ". Хитрость - " + slizerin.getCunning() + ". Решительность - " + slizerin.getDetermination() +
-                    ". Амбициозность - " + slizerin.getAmbition() + ". Находчивость - " +
-                    slizerin.getResourcefulness() + ". Жажда власти - "
-                    + slizerin.getThirstForPower());
-        }
+    public static void print(Slizerin malfoy, Slizerin monteg, Slizerin goyl) {
+        System.out.println("Факультет Слизерин");
+            System.out.println("Имя - " + malfoy.getName() + ". Фамилия - " + malfoy.getSurName() + ". Сила магии и расстояние трансгресии - "
+                    + malfoy.getMagic() + ". Хитрость - " + malfoy.getCunning() + ". Решительность - " + malfoy.getDetermination() +
+                    ". Амбициозность - " + malfoy.getAmbition() + ". Находчивость - " +
+                    malfoy.getResourcefulness() + ". Жажда власти - "
+                    + malfoy.getThirstForPower());
+
+        System.out.println("Имя - " + monteg.getName() + ". Фамилия - " + monteg.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + monteg.getMagic() + ". Хитрость - " + monteg.getCunning() + ". Решительность - " + monteg.getDetermination() +
+                ". Амбициозность - " + monteg.getAmbition() + ". Находчивость - " +
+                monteg.getResourcefulness() + ". Жажда власти - "
+                + monteg.getThirstForPower());
+
+        System.out.println("Имя - " + goyl.getName() + ". Фамилия - " + goyl.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + goyl.getMagic() + ". Хитрость - " + goyl.getCunning() + ". Решительность - " + goyl.getDetermination() +
+                ". Амбициозность - " + goyl.getAmbition() + ". Находчивость - " +
+                goyl.getResourcefulness() + ". Жажда власти - "
+                + goyl.getThirstForPower());
+
         System.out.println("");
 
     }
 
-    public static void scoringPoints(Slizerin[] slizerins) {
-        for (int i = 0; i < slizerins.length; i++) {
-            int summ = slizerins[i].getMagic() + slizerins[i].getCunning() + slizerins[i].getDetermination() +
-                    slizerins[i].getAmbition() + slizerins[i].getResourcefulness() + slizerins[i].getThirstForPower();
-            System.out.println("Сумма балов у ученика " + slizerins[i].getName() + " " + slizerins[i].getSurName() + " равна - " + summ);
+    public static void scoringPoints(Slizerin malfoy, Slizerin monteg, Slizerin goyl) {
+
+            int summ = malfoy.getMagic() + malfoy.getCunning() + malfoy.getDetermination() +
+                    malfoy.getAmbition() + malfoy.getResourcefulness() + malfoy.getThirstForPower();
+            System.out.println("Сумма балов у ученика " + malfoy.getName() + " " + malfoy.getSurName() + " равна - " + summ);
+
+        int summ1 = monteg.getMagic() + monteg.getCunning() + monteg.getDetermination() +
+                monteg.getAmbition() + monteg.getResourcefulness() + monteg.getThirstForPower();
+        System.out.println("Сумма балов у ученика " + monteg.getName() + " " + monteg.getSurName() + " равна - " + summ1);
+
+        int summ2 = goyl.getMagic() + goyl.getCunning() + goyl.getDetermination() +
+                goyl.getAmbition() + goyl.getResourcefulness() + goyl.getThirstForPower();
+        System.out.println("Сумма балов у ученика " + goyl.getName() + " " + goyl.getSurName() + " равна - " + summ2);
 
 
-        }
+
         System.out.println("");
     }
 
-    public static void summ(Slizerin[] slizerins) {
-        int summ1 = slizerins[0].getMagic() + slizerins[0].getCunning() + slizerins[0].getDetermination() +
-                slizerins[0].getAmbition() + slizerins[0].getResourcefulness() + slizerins[0].getThirstForPower();
-        int summ2 = slizerins[1].getMagic() + slizerins[1].getCunning() + slizerins[1].getDetermination() +
-                slizerins[1].getAmbition() + slizerins[1].getResourcefulness() + slizerins[1].getThirstForPower();
-        if (summ1 > summ2) {
-            System.out.println("У " + slizerins[0].getName() + " " + slizerins[0].getSurName() + " " + summ1 + " баллов. "
-                    + slizerins[0].getName() + " " + slizerins[0].getSurName() + " Лучший Слизеринец на факультете.");
+    public static void summ(Slizerin malfoy, Slizerin monteg) {
+        int summMalfoy = malfoy.getMagic() + malfoy.getCunning() + malfoy.getDetermination() +
+                malfoy.getAmbition() + malfoy.getResourcefulness() + malfoy.getThirstForPower();
+        int summMonteg = monteg.getMagic() + monteg.getCunning() + monteg.getDetermination() +
+                monteg.getAmbition() + monteg.getResourcefulness() + monteg.getThirstForPower();
+        if (summMalfoy > summMonteg) {
+            System.out.println("У " + malfoy.getName() + " " + malfoy.getSurName() + " " + summMalfoy + " баллов. "
+                    + malfoy.getName() + " " + malfoy.getSurName() + " Лучший Слизеринец на факультете.");
         } else {
-            System.out.println("У " + slizerins[1].getName() + " " + slizerins[1].getSurName() + " " + summ2 + " баллов. "
-                    + slizerins[1].getName() + " " + slizerins[1].getSurName() + " Лучший Слизеринец на факультете.");
+            System.out.println("У " + monteg.getName() + " " + monteg.getSurName() + " " + summMonteg + " баллов. "
+                    + monteg.getName() + " " + monteg.getSurName() + " Лучший Слизеринец на факультете.");
         }
         System.out.println("");
     }

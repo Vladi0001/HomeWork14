@@ -50,33 +50,47 @@ class Puffenduy extends Hogwarts{
         return Objects.hash(super.hashCode(), diligence, loyalty, honesty);
     }
 
-    public static void print(Puffenduy [] puffenduys) {
-        System.out.println("Учеников на факультете Пуфендуй - " + puffenduys.length + " человека.");
-        for (int i = 0; i < puffenduys.length; i++) {
-            Puffenduy puffenduy = puffenduys[i];
-            System.out.println("Имя - " + puffenduy.getName() + ". Фамилия - " + puffenduy.getSurName() + ". Сила магии и расстояние трансгресии - "
-                    + puffenduy.getMagic() + ". Трудолюбие - " + puffenduy.getDiligence() + ". Верность - " +
-                    puffenduy.getLoyalty() + ". Честность - "
-                    + puffenduy.getHonesty());
-        }
+    public static void print(Puffenduy smit, Puffenduy Diggori, Puffenduy Finch) {
+        System.out.println("Факультет Пуффендуй");
+            System.out.println("Имя - " + smit.getName() + ". Фамилия - " + smit.getSurName() + ". Сила магии и расстояние трансгресии - "
+                    + smit.getMagic() + ". Трудолюбие - " + smit.getDiligence() + ". Верность - " +
+                    smit.getLoyalty() + ". Честность - "
+                    + smit.getHonesty());
+
+        System.out.println("Имя - " + Diggori.getName() + ". Фамилия - " + Diggori.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + Diggori.getMagic() + ". Трудолюбие - " + Diggori.getDiligence() + ". Верность - " +
+                Diggori.getLoyalty() + ". Честность - "
+                + Diggori.getHonesty());
+
+        System.out.println("Имя - " + Finch.getName() + ". Фамилия - " + Finch.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + Finch.getMagic() + ". Трудолюбие - " + Finch.getDiligence() + ". Верность - " +
+                Finch.getLoyalty() + ". Честность - "
+                + Finch.getHonesty());
+
         System.out.println("");
     }
-    public static void scoringPoints(Puffenduy [] puffenduys) {
-        for (int i = 0; i < puffenduys.length; i++) {
-            int summ = puffenduys[i].getMagic() + puffenduys[i].getDiligence() + puffenduys[i].getLoyalty() + puffenduys[i].getHonesty();
-            System.out.println("Сумма балов у ученика " + puffenduys[i].getName() + " " + puffenduys[i].getSurName() + " равна - " + summ);
-        }
+    public static void scoringPoints(Puffenduy smit, Puffenduy Diggori, Puffenduy Finch) {
+
+            int summ = smit.getMagic() + smit.getDiligence() + smit.getLoyalty() + smit.getHonesty();
+            System.out.println("Сумма балов у ученика " + smit.getName() + " " + smit.getSurName() + " равна - " + summ);
+
+        int summ2 = Diggori.getMagic() + Diggori.getDiligence() + Diggori.getLoyalty() + Diggori.getHonesty();
+        System.out.println("Сумма балов у ученика " + Diggori.getName() + " " + Diggori.getSurName() + " равна - " + summ2);
+
+        int summ3 = Finch.getMagic() + Finch.getDiligence() + Finch.getLoyalty() + Finch.getHonesty();
+        System.out.println("Сумма балов у ученика " + Finch.getName() + " " + Finch.getSurName() + " равна - " + summ3);
+
         System.out.println("");
     }
-    public static void summ(Puffenduy [] puffenduys) {
-        int summ1 = puffenduys[0].getMagic() + puffenduys[0].getDiligence() + puffenduys[0].getLoyalty() + puffenduys[0].getHonesty();
-        int summ2 = puffenduys[1].getMagic() + puffenduys[1].getDiligence() + puffenduys[1].getLoyalty() + puffenduys[1].getHonesty();
-        if (summ1 > summ2) {
-            System.out.println("У " + puffenduys[0].getName() + " " + puffenduys[0].getSurName() + " " + summ1 + " баллов. "
-                    + puffenduys[0].getName() + " " + puffenduys[0].getSurName() + " Лучший Пуфендуец на факультете.");
+    public static void summ(Puffenduy smit, Puffenduy Diggori) {
+        int summSmit = smit.getMagic() + smit.getDiligence() + smit.getLoyalty() + smit.getHonesty();
+        int summDiggori = Diggori.getMagic() + Diggori.getDiligence() + Diggori.getLoyalty() + Diggori.getHonesty();
+        if (summSmit > summDiggori) {
+            System.out.println("У " + smit.getName() + " " + smit.getSurName() + " " + summSmit + " баллов. "
+                    + smit.getName() + " " + smit.getSurName() + " Лучший Пуфендуец на факультете.");
         } else {
-            System.out.println("У " + puffenduys[1].getName() + " " + puffenduys[1].getSurName() + " " + summ2 + " баллов. "
-                    + puffenduys[1].getName() + " " + puffenduys[1].getSurName() + " Лучший Пуфендуец на факультете.");
+            System.out.println("У " + Diggori.getName() + " " + Diggori.getSurName() + " " + summDiggori + " баллов. "
+                    + Diggori.getName() + " " + Diggori.getSurName() + " Лучший Пуфендуец на факультете.");
         }
         System.out.println("");
     }

@@ -60,36 +60,52 @@ class Cogtevran extends Hogwarts{
         return Objects.hash(super.hashCode(), mind, wisdom, wit, creativeApproach);
     }
 
-    public static void print(Cogtevran [] cogtevrans) {
-        System.out.println("Учеников на факультете Когтевран - " + cogtevrans.length + " человека.");
-        for (int i = 0; i < cogtevrans.length; i++) {
-            Cogtevran cogtevran = cogtevrans[i];
-            System.out.println("Имя - " + cogtevran.getName() + ". Фамилия - " + cogtevran.getSurName() + ". Сила магии и расстояние трансгресии - "
-                    + cogtevran.getMagic() + ". Ум - " + cogtevran.getMind() + ". Мудрость - " +
-                    cogtevran.getWisdom() + ". Остроумие - "
-                    + cogtevran.getWit() + ". Творческий подход - " + cogtevran.getCreativeApproach());
-        }
+    public static void print(Cogtevran chang, Cogtevran patil, Cogtevran belbi) {
+        System.out.println("Факультет Когтевран");
+            System.out.println("Имя - " + chang.getName() + ". Фамилия - " + chang.getSurName() + ". Сила магии и расстояние трансгресии - "
+                    + chang.getMagic() + ". Ум - " + chang.getMind() + ". Мудрость - " +
+                    chang.getWisdom() + ". Остроумие - "
+                    + chang.getWit() + ". Творческий подход - " + chang.getCreativeApproach());
+
+        System.out.println("Имя - " + patil.getName() + ". Фамилия - " + patil.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + patil.getMagic() + ". Ум - " + patil.getMind() + ". Мудрость - " +
+                patil.getWisdom() + ". Остроумие - "
+                + patil.getWit() + ". Творческий подход - " + patil.getCreativeApproach());
+
+        System.out.println("Имя - " + belbi.getName() + ". Фамилия - " + belbi.getSurName() + ". Сила магии и расстояние трансгресии - "
+                + belbi.getMagic() + ". Ум - " + belbi.getMind() + ". Мудрость - " +
+                belbi.getWisdom() + ". Остроумие - "
+                + belbi.getWit() + ". Творческий подход - " + belbi.getCreativeApproach());
+
         System.out.println("");
     }
-    public static void scoringPoints(Cogtevran [] cogtevrans) {
-        for (int i = 0; i < cogtevrans.length; i++) {
-            int summ = cogtevrans[i].getMagic() + cogtevrans[i].getMind() + cogtevrans[i].getWisdom() + cogtevrans[i].getWit()
-                    + cogtevrans[i].getCreativeApproach();
-            System.out.println("Сумма балов у ученика " + cogtevrans[i].getName() + " " + cogtevrans[i].getSurName() + " равна - " + summ);
-        }
+    public static void scoringPoints(Cogtevran chang, Cogtevran patil, Cogtevran belbi) {
+
+            int summ = chang.getMagic() + chang.getMind() + chang.getWisdom() + chang.getWit()
+                    + chang.getCreativeApproach();
+            System.out.println("Сумма балов у ученика " + chang.getName() + " " + chang.getSurName() + " равна - " + summ);
+
+        int summ2 = patil.getMagic() + patil.getMind() + patil.getWisdom() + patil.getWit()
+                + patil.getCreativeApproach();
+        System.out.println("Сумма балов у ученика " + patil.getName() + " " + patil.getSurName() + " равна - " + summ2);
+
+        int summ3 = belbi.getMagic() + belbi.getMind() + belbi.getWisdom() + belbi.getWit()
+                + belbi.getCreativeApproach();
+        System.out.println("Сумма балов у ученика " + belbi.getName() + " " + belbi.getSurName() + " равна - " + summ3);
+
         System.out.println("");
     }
-    public static void summ(Cogtevran [] cogtevrans) {
-        int summ1 = cogtevrans[0].getMagic() + cogtevrans[0].getMind() + cogtevrans[0].getWisdom() + cogtevrans[0].getWit()
-                + cogtevrans[0].getCreativeApproach();
-        int summ2 = cogtevrans[1].getMagic() + cogtevrans[1].getMind() + cogtevrans[1].getWisdom() + cogtevrans[1].getWit()
-                + cogtevrans[1].getCreativeApproach();
-        if (summ1 > summ2) {
-            System.out.println("У " + cogtevrans[0].getName() + " " + cogtevrans[0].getSurName() + " " + summ1 + " баллов. "
-                    + cogtevrans[0].getName() + " " + cogtevrans[0].getSurName() + " Лучший Когтевранец на факультете.");
+    public static void summ(Cogtevran chang, Cogtevran patil) {
+        int summChang = chang.getMagic() + chang.getMind() + chang.getWisdom() + chang.getWit()
+                + chang.getCreativeApproach();
+        int summPatil = patil.getMagic() + patil.getMind() + patil.getWisdom() + patil.getWit()
+                + patil.getCreativeApproach();
+        if (summChang > summPatil) {
+            System.out.println("У " + chang.getName() + " " + chang.getSurName() + " " + summChang + " баллов. "
+                    + chang.getName() + " " + chang.getSurName() + " Лучший Когтевранец на факультете.");
         } else {
-            System.out.println("У " + cogtevrans[1].getName() + " " + cogtevrans[1].getSurName() + " " + summ2 + " баллов. "
-                    + cogtevrans[1].getName() + " " + cogtevrans[1].getSurName() + " Лучший Когтевранец на факультете.");
+            System.out.println("У " + patil.getName() + " " + patil.getSurName() + " " + summPatil + " баллов. "
+                    + patil.getName() + " " + patil.getSurName() + " Лучший Когтевранец на факультете.");
         }
         System.out.println("");
     }
